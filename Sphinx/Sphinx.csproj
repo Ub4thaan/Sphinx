@@ -42,11 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\Base\BaseViewModel.cs" />
+    <Compile Include="ViewModels\ParametrisedTextBoxViewModel.cs" />
+    <Compile Include="ViewModels\TextBoxViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ValidationRules\" />
     <Folder Include="ValueConverters\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
