@@ -10,7 +10,7 @@ namespace Sphinx.ViewModels
 {
     public class TextBoxViewModels : BaseViewModel
     {
-        public virtual string Text 
+        public string Text 
         {
             get
             {
@@ -25,9 +25,39 @@ namespace Sphinx.ViewModels
                 }
             }
         }
+        public bool IsEnabled
+        {
+            get
+            {
+                return _IsEnabled;
+            }
+            set
+            {
+                if (_IsEnabled != value)
+                {
+                    _IsEnabled = value;
+                    RaisePropertyChanged(nameof(IsEnabled));
+                }
+            }
+        }
+        public bool IsVisible
+        {
+            get
+            {
+                return _IsVisible;
+            }
+            set
+            {
+                if (_IsVisible != value)
+                {
+                    _IsVisible = value;
+                    RaisePropertyChanged(nameof(IsVisible));
+                }
+            }
+        }
 
         private string _Text;
+        private bool _IsEnabled;
+        private bool _IsVisible;
     }
-
-    
 }
