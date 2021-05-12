@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,13 +43,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidationRules\DecimalValidationRule.cs" />
+    <Compile Include="ValidationRules\FloatValidationRule.cs" />
+    <Compile Include="ValidationRules\DoubleValidationRule.cs" />
+    <Compile Include="ValidationRules\Integer16ValidationRule.cs" />
+    <Compile Include="ValidationRules\Integer64ValidationRule.cs" />
+    <Compile Include="ValidationRules\Integer32ValidationRule.cs" />
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\ButtonViewModels.cs" />
     <Compile Include="ViewModels\ParametrisedTextBoxViewModels.cs" />
     <Compile Include="ViewModels\TextBoxViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ValidationRules\" />
     <Folder Include="ValueConverters\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
