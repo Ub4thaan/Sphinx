@@ -53,9 +53,25 @@ namespace Sphinx.ViewModels
                 }
             }
         }
+        public bool IsChecked
+        {
+            get
+            {
+                return _IsChecked;
+            }
+            set
+            {
+                if (_IsChecked != value)
+                {
+                    _IsChecked = value;
+                    RaisePropertyChanged(nameof(IsChecked));
+                }
+            }
+        }
 
         private string _Content;
         private bool _IsEnabled;
         private bool _IsVisible;
+        private bool _IsChecked;
     }
 }
