@@ -8,27 +8,16 @@ using System.Windows.Data;
 
 namespace Sphinx.ValueConverters
 {
-    public class StringToInt32Converter : IValueConverter
+    public class BoolInverterConverter : IValueConverter
     {
-        public string Format { get; set; } = "";
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            try
-            {
-                return Int32.Parse((string)value);
-            }
-            catch (Exception ex) 
-            {
-                return 0;
-            }
+            return !(bool)value;
         }
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            if (value is Int32)
-            {
-                return ((Int32)value).ToString(Format);
-            }
-            return "";
+            return !(bool)value;
+
         }
     }
 }
