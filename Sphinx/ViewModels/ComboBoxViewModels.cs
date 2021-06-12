@@ -7,24 +7,23 @@ using System.Threading.Tasks;
 
 namespace Sphinx.ViewModels
 {
-    public class TextBoxViewModels<T> : BaseViewModel
+    public class ComboBoxViewModels : BaseViewModel
     {
-        public T Value
+        public int SelectedIndex
         {
             get
             {
-                return _Value;
+                return _SelectedIndex;
             }
             set
             {
-                if (!_Value.Equals(value))
+                if (_SelectedIndex != value)
                 {
-                    _Value = value;
-                    RaisePropertyChanged(nameof(Value));
+                    _SelectedIndex = value;
+                    RaisePropertyChanged(nameof(SelectedIndex));
                 }
             }
         }
-
         public bool IsEnabled
         {
             get
@@ -56,7 +55,7 @@ namespace Sphinx.ViewModels
             }
         }
 
-        private T _Value;
+        private int _SelectedIndex;
         private bool _IsEnabled;
         private bool _IsVisible;
     }
