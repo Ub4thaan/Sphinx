@@ -31,7 +31,7 @@ namespace Sphinx.ValidationRules
             {
                 if (number < Min || number > Max)
                 {
-                    return new ValidationResult(false, $"Please enter a value in the range: {Min} - {Max}, excluding extremes");
+                    return new ValidationResult(false, $"Please enter a value in the range: {Min} - {Max}, including extremes");
                 }
             }
             else

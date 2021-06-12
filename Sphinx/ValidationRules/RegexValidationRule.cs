@@ -16,7 +16,7 @@ namespace Sphinx.ValidationRules
 
         public override ValidationResult Validate(object value, CultureInfo cultureInfo)
         {
-            if (Regex.IsMatch((string)value, Rule))
+            if (!Regex.IsMatch((string)value, Rule))
             {
                 return new ValidationResult(false, ErrorMessage);
             }
