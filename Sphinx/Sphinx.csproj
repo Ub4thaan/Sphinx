@@ -38,6 +38,7 @@
     <PlatformTarget>x86</PlatformTarget>
     <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
+    <NoWarn>CS0168</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>bin\x86\Release\</OutputPath>
@@ -74,6 +75,7 @@
     <Compile Include="ValidationRules\Integer16ValidationRule.cs" />
     <Compile Include="ValidationRules\Integer64ValidationRule.cs" />
     <Compile Include="ValidationRules\Integer32ValidationRule.cs" />
+    <Compile Include="ValueConverters\BoolInverterConverter.cs" />
     <Compile Include="ValueConverters\StringToDecimalConverter.cs" />
     <Compile Include="ValueConverters\StringToInt64Converter.cs" />
     <Compile Include="ValueConverters\StringToInt32Converter.cs" />
@@ -82,6 +84,7 @@
     <Compile Include="ValueConverters\StringToDoubleConverter.cs" />
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\ButtonViewModels.cs" />
+    <Compile Include="ViewModels\ComboBoxViewModels.cs" />
     <Compile Include="ViewModels\ParametrisedTextBoxViewModels.cs" />
     <Compile Include="ViewModels\PopupViewModels.cs" />
     <Compile Include="ViewModels\TextBoxViewModels.cs" />
